@@ -261,9 +261,9 @@
 		return true;
 	}
 
-	q.onPulledDown = @(__original) function( _entity, _tag )
+	q.onPulledDown <- function( _entity, _tag )
 	{
-		__original(_entity, _tag);
+		_entity.onDamageReceived(_tag.Attacker, _tag.Skill, _tag.HitInfo);
 		_tag.Skill.getContainer().onTargetHit(_tag.Skill, _entity, _tag.HitInfo.BodyPart, _tag.HitInfo.DamageInflictedHitpoints, _tag.HitInfo.DamageInflictedArmor);
 	}
 
