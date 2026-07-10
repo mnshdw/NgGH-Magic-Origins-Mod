@@ -71,18 +71,15 @@
 		m.Overlay = "perk_07";
 	}
 
-	q.setSpent = @(__original) function(_f)
-	{
+	q.setSpent = @(__original) function (_f) {
+		if (_f && !m.IsSpent) {
+			--m.NineLivesCount;
+		}
+
 		__original(_f);
 		m.IsSpent = isSpent();
 
 		if (!m.IsSpent)
 			m.LastFrameUsed = 0;
-	}
-	
-	q.onProc = @(__original) function()
-	{
-		__original();
-		return --m.NineLivesCount;
 	}
 });
