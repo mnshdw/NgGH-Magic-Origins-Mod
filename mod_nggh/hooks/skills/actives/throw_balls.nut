@@ -25,8 +25,10 @@
 		return ret;
 	}
 
-	q.onTargetHit <- function( _skill, _targetEntity, _bodyPart, _damageInflictedHitpoints, _damageInflictedArmor )
+	q.onTargetHit = @(__original) function( _skill, _targetEntity, _bodyPart, _damageInflictedHitpoints, _damageInflictedArmor )
 	{
+		__original(_skill, _targetEntity, _bodyPart, _damageInflictedHitpoints, _damageInflictedArmor);
+
 		if (_skill == this && _targetEntity.isAlive() && ::Math.rand(1, 100) <= m.StaggerChance) {
 			_targetEntity.getSkills().add(::new("scripts/skills/effects/staggered_effect"));
 			::Tactical.EventLog.log(::Const.UI.getColorizedEntityName(getContainer().getActor()) + " has staggered " + ::Const.UI.getColorizedEntityName(_targetEntity) + " for 2 turns");
