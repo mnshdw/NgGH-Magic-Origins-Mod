@@ -1990,8 +1990,8 @@ for (local i = 0; i < ::Const.EntityIcon.len(); ++i)
 
 });
 
-//BanditVeteran
-::Const.CharmedUnits.addDefaultEntry(::Const.EntityType.BanditVeteran, {
+//BanditVeteran (renamed to BanditMarauder in 19.4.0)
+::Const.CharmedUnits.addDefaultEntry(::Const.EntityType.BanditMarauder, {
 	StatMod = { Hitpoints = [-28, -20], Bravery = [-15, -10], Stamina = [-18, -10], MeleeSkill = [-8, -8], RangedSkill = [-5, -5], MeleeDefense = [-10, -5], RangedDefense = [-5, -5], Initiative = [-15, -15] },
 	Perks = ["Brawny", "Relentless"],
 	Requirements = ["NggHCharmWords"],
