@@ -92,6 +92,8 @@
 
 	q.onDamageReceived = @() function( _attacker, _damageHitpoints, _damageArmor )
 	{
+		if (("SpawnSchratling" in m) && !m.SpawnSchratling) return;
+
 		local actor = getContainer().getActor();
 
 		if (_damageHitpoints >= actor.getHitpointsMax() * m.HPThresholdToProc) {

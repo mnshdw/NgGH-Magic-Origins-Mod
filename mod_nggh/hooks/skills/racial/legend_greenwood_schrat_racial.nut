@@ -84,6 +84,8 @@
 
 	q.onDamageReceived = @() function( _attacker, _damageHitpoints, _damageArmor )
 	{
+		if (("SpawnSchratling" in m) && !m.SpawnSchratling) return;
+
 		local actor = getContainer().getActor();
 		local mult = m.IsPlayer ? m.HPThresholdToProc : 0.01;
 
