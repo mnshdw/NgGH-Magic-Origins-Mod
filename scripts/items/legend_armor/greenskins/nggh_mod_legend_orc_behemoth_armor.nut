@@ -22,9 +22,9 @@ this.nggh_mod_legend_orc_behemoth_armor <- ::inherit("scripts/items/legend_armor
 
 	function updateVariant()
 	{
-		this.m.Sprite = "legend_orc_behemoth_armour_01";
-		this.m.SpriteDamaged = "legend_orc_behemoth_armour_01_damaged";
-		this.m.SpriteCorpse = "legend_orc_behemoth_armour_01_dead";
+		this.m.Sprite = "legend_orc_behemoth_armor_01";
+		this.m.SpriteDamaged = "legend_orc_behemoth_armor_01_damaged";
+		this.m.SpriteCorpse = "legend_orc_behemoth_armor_01_dead";
 		this.m.Icon = "armor/icon_legend_orc_behemoth_armour_01.png";
 		this.m.IconLarge = "armor/inventory_goblin_body_armor.png";
 	}
