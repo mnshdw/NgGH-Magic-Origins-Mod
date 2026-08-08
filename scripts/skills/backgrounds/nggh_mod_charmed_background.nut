@@ -140,6 +140,8 @@ this.nggh_mod_charmed_background <- ::inherit("scripts/skills/backgrounds/charac
 		if (data != null && ("onAdded" in data) && typeof data.onAdded == "function") data.onAdded.call(this);
 
 		this.character_background.onAdded();
+
+		this.getContainer().add(::new("scripts/skills/hexe/nggh_mod_fake_charmed_effect"));
 	}
 
 	function onAddEquipment()
